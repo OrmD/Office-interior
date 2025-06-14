@@ -2,5 +2,9 @@
   background-color: $color;
   border-radius: rem(12);
   padding: resizing(20, 10) resizing(30, 15);
-  width: resizing(710, 335);
+  //width: resizing(710, 335,);
+  min-width: rem(300);
+  max-width: rem(710);
+  width: 100%;
+  min-height: 336px;
 }
