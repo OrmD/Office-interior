@@ -10,9 +10,8 @@
 
 <body>
 	<header class="header">
-		<div class="container">
-
-			<div class="header__hat">
+		<div class="header__hat">
+			<div class="container">
 				<p class="header__hat-text">Gratis bezorging & montage vanaf € 275 — in Nederland & Belgie</p>
 
 				<div class="header__hat-wrapper-review">
@@ -24,14 +23,16 @@
 						<img src="/Images/header-icons/Star.svg" alt="header-star" class="header__hat-star-img">
 					</div>
 					<p class="header__hat-reviews"> 1599 reviews</p>
-
 				</div>
 			</div>
+		</div>
+		<div class="container">
 
 			<div class="header__body">
-				<div class="header__body-logo">
-					<a href="/" class="header__body-logo">
-						<img src="/Images/header-icons/logo-pc.png" alt="Office-Interior logo">
+
+				<div class="header__logo">
+					<a href="/" class="header__logo-link">
+						<img src="/Images/header-icons/logo-pc.png" alt="Office-Interior logo" class="header__logo-img">
 					</a>
 				</div>
 
@@ -83,10 +84,11 @@
 				<nav class="header__body-icons">
 
 					<a href="#" class="header__body-icons-link">
-						<img src="/Images/header-icons/search.svg" alt="search-icon" class="header__body-icons-img">
+						<img src="/Images/header-icons/search-icon.svg" alt="search-icon"
+							class="header__body-icons-img">
 					</a>
 					<a href="#" class="header__body-icons-link">
-						<img src="/Images/header-icons/heart.svg" alt="heart-icon" class="header__body-icons-img">
+						<img src="/Images/svg/like-heart.svg" alt="heart-icon" class="header__body-icons-img">
 					</a>
 					<a href="#" class="header__body-icons-link">
 						<img src="/Images/svg/shop-basket.svg" alt="shop-basket-icon" class="header__body-icons-img">
@@ -112,11 +114,20 @@
 					</button>
 
 				</div>
+
+				<button type="button" class="burger-menu" aria-expanded="false" aria-label="Open menu">
+					<div class="burger-menu__line l-1"></div>
+					<div class="burger-menu__line l-2"></div>
+					<div class="burger-menu__line l-3"></div>
+				</button>
+
+
 			</div>
 
 		</div>
 	</header>
 </body>
 
+<script src="/Scripts/main.js"></script>
 
 </html>

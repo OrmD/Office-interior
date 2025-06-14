@@ -1,5 +1,63 @@
+@import "../abstracts/variables";
+
 .container {
   max-width: $max-width-layout;
   margin: 0 auto;
+  padding: 0 rem(20);
   width: 100%;
+  @media (max-width: 375px) {
+    padding: 0 rem(10);
+  }
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+  width: 100%;
+  @media (max-width: 700px) {
+    text-align: center;
+    left: -13px;
+    height: 160%;
+    background-color: #ffffff67;
+  }
+}
+.active {
+  transform: rotate(180deg);
+  transition: all 0.2s ease-in 0s;
+}
+.burger-menu {
+  padding: rem(5);
+  border: none;
+  display: none;
+  @media (max-width: 700px) {
+    display: block;
+  }
+  // .burger-menu__line
+  &__line {
+    width: resizing(30, 24, 700, 375);
+    height: rem(3);
+    background-color: $primary-color;
+    border-radius: rem(2);
+    transition: all 0.2s ease-in 0s;
+    margin-bottom: rem(5);
+    margin-top: rem(5);
+  }
+  &.burg-active {
+    position: fixed;
+    top: 20px;
+    right: resizing(280, 210, 700, 375);
+    z-index: 20;
+    & > :nth-child(1) {
+      transform-origin: center;
+      transform: rotate(45deg) translateY(11px);
+    }
+    & > :nth-child(2) {
+      opacity: 0;
+    }
+    & > :nth-child(3) {
+      transform-origin: center;
+      transform: rotate(-45deg) translateY(-11px);
+    }
+  }
 }
