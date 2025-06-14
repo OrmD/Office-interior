@@ -1,0 +1,6 @@
+@mixin card-mix($color) {
+  background-color: $color;
+  border-radius: rem(12);
+  padding: resizing(20, 10) resizing(30, 15);
+  width: resizing(710, 335);
+}

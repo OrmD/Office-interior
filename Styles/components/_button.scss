@@ -1,0 +1,9 @@
+button {
+  /* bttn */
+  padding: rem(10) rem(18);
+  border-radius: $btn-radius;
+  font-weight: 400;
+  border: 1px solid $primary-color;
+  color: $primary-color;
+  background-color: transparent;
+}

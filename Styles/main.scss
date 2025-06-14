@@ -1,0 +1,39 @@
+// Abstracts
+@import "abstracts/variables";
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/fonts";
+
+// Base
+@import "base/reset";
+@import "base/typography";
+
+// Layout
+@import "layout/header";
+@import "layout/footer";
+
+// Components
+@import "components/button";
+@import "components/input";
+@import "components/_info-card";
+
+// Sections
+@import "sections/product";
+@import "sections/descriptions";
+@import "sections/fullscreen";
+@import "sections/_chair";
+@import "sections/_4-info-card";
+@import "sections/_before-footer";
+// Pages
+h2 {
+  font-weight: 600;
+  font-size: resizing(42, 28);
+}
+body {
+  background-color: $secondary-color;
+  color: $primary-color;
+  font-family: $main-font;
+  font-weight: 400;
+  font-size: rem(16);
+  width: 100%;
+}

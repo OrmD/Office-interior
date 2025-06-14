@@ -1,0 +1,127 @@
+/* Обнуляючі стилі */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Робимо box-sizing: border-box за замовчуванням */
+}
+
+html {
+  font-size: 16px; /* Встановлюємо базовий розмір шрифту */
+  scroll-behavior: smooth; /* Плавна прокрутка */
+}
+
+body {
+  line-height: 1.5; /* Стандартний міжрядковий інтервал */
+  -webkit-font-smoothing: antialiased; /* Покращуємо рендеринг шрифтів у WebKit */
+  -moz-osx-font-smoothing: grayscale; /* Покращуємо рендеринг шрифтів у Firefox */
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block; /* Робимо зображення блочними, щоб уникнути зайвих відступів */
+  max-width: 100%; /* Забороняємо зображенням виходити за межі контейнера */
+  height: auto; /* Зберігаємо пропорції зображень */
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit; /* Наслідуємо шрифт для елементів форми */
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word; /* Переносимо слова, якщо вони не поміщаються */
+}
+h4,
+h3 {
+  font-weight: 400;
+}
+
+ul,
+li,
+ol {
+  list-style: none; /* Видаляємо маркери списків */
+}
+
+a {
+  text-decoration: none; /* Видаляємо підкреслення у посилань */
+  color: inherit; /* Наслідуємо колір тексту */
+}
+
+button {
+  border: none; /* Видаляємо рамку у кнопок */
+  background: none; /* Видаляємо фон у кнопок */
+  cursor: pointer; /* Робимо курсор у вигляді вказівника */
+}
+
+/* Додаткові обнуляючі стилі */
+table {
+  border-collapse: collapse; /* Зливаємо рамки таблиць */
+  border-spacing: 0; /* Видаляємо відступи між комірками таблиць */
+}
+
+/* Видаляємо стандартні стилі для fieldset та legend */
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+/* Видаляємо стандартні стилі для деталей (details) */
+details {
+  display: block;
+}
+
+summary {
+  display: list-item;
+  cursor: pointer;
+}
+
+/* Видаляємо стандартні стилі для діалогів (dialog) */
+dialog {
+  padding: 0;
+  border: none;
+}
+
+/* Видаляємо стандартні стилі для progress */
+progress {
+  vertical-align: baseline;
+}
+
+/* Видаляємо стандартні стилі для textarea */
+textarea {
+  resize: vertical; /* Дозволяємо змінювати розмір тільки по вертикалі */
+}
+
+/* Видаляємо стандартні стилі для input[type="search"] */
+input[type="search"] {
+  -webkit-appearance: none; /* Видаляємо стандартні стилі для Safari */
+  appearance: none;
+}
+
+/* Видаляємо стандартні стилі для input[type="number"] */
+input[type="number"] {
+  -moz-appearance: textfield; /* Видаляємо стрілки у Firefox */
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none; /* Видаляємо стрілки у Chrome/Safari */
+  margin: 0;
+}

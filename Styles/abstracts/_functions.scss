@@ -1,0 +1,40 @@
+@use "sass:math";
+
+/*function for smooth resizing depending on the window size*/
+@function resizing(
+  $max,
+  $min,
+  $maxViewportWidth: 1440,
+  $minViewportWidth: 375
+) {
+  $maxSize: math.div($max, 16);
+  $minSize: math.div($min, 16);
+  $maxWidth: math.div($maxViewportWidth, 16);
+  $minWidth: math.div($minViewportWidth, 16);
+
+  $slope: math.div(($maxSize - $minSize), ($maxWidth - $minWidth));
+  $yAxisIntersection: -$minWidth * $slope + $minSize;
+
+  @if ($min > $max) {
+    @return clamp(
+      #{$maxSize * 1rem},
+      #{$yAxisIntersection * 1rem} + #{$slope * 100vw},
+      #{$minSize * 1rem}
+    );
+  } @else {
+    @return clamp(
+      #{$minSize * 1rem},
+      #{$yAxisIntersection * 1rem} + #{$slope * 100vw},
+      #{$maxSize * 1rem}
+    );
+  }
+}
+
+/*function to convert px to rem*/
+@function rem($pixel) {
+  @if math.is-unitless($pixel) {
+    @return math.div($pixel, 16) + rem;
+  } @else {
+    @error 'Не використовуйте одиниці вимірювання під час роботи з функцією rem()! Передавайте аргументом лише числа.';
+  }
+}
