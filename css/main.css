@@ -536,6 +536,60 @@ input {
   align-items: center;
 }
 
+.fullscreen {
+  color: #ffffff;
+}
+.fullscreen__body {
+  background: url("/Images/fullscreen/full-screen-section.png");
+  background-size: cover;
+  background-position: center center; /* Центрує по горизонталі і вертикалі */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-attachment: fixed;
+  overflow: hidden;
+  border-radius: 20px;
+  height: clamp(26.125rem, 21.613556338rem + 19.2488262911vw, 38.9375rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: clamp(1.75rem, 1.5959507042rem + 0.6572769953vw, 2.1875rem);
+  text-align: center;
+}
+@media (max-width: 1024px) {
+  .fullscreen__body {
+    background-position: 70% 0%;
+  }
+}
+.fullscreen__title {
+  font-size: clamp(1.25rem, 1.588028169rem + -0.3755868545vw, 1.5rem);
+  line-height: 142%;
+}
+.fullscreen__desc {
+  font-weight: 600;
+  font-size: clamp(1.5rem, 1.323943662rem + 0.7511737089vw, 2rem);
+}
+.fullscreen__btn {
+  font-weight: 500;
+  padding: 0.625rem 1.125rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  background-color: transparent;
+  max-width: 14rem;
+  width: 100%;
+  transition: all 0.3s ease 0s;
+}
+.fullscreen__btn:hover {
+  color: rgba(255, 255, 255, 0.7411764706);
+  transition: all 0.3s ease 0s;
+  border-color: #8c8c8c;
+  background-color: rgba(140, 140, 140, 0.2941176471);
+}
+.fullscreen__btn:active {
+  color: #2c2929;
+}
+
 .chair__body {
   display: flex;
   flex-wrap: wrap;
