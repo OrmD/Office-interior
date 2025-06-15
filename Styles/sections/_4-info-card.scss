@@ -1,6 +1,7 @@
 @import "../abstracts/variables";
 @import "../abstracts/mixins";
 .info-card {
+  margin-bottom: resizing(90, 41);
   // .info-card__wrapper
   &__wrapper {
     display: flex;

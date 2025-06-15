@@ -515,9 +515,35 @@ input {
 
 /*function for smooth resizing depending on the window size*/
 /*function to convert px to rem*/
+.client-company {
+  margin-bottom: clamp(2.5625rem, 2.4964788732rem + 0.2816901408vw, 2.75rem);
+}
+.client-company__title {
+  text-align: center;
+  font-size: clamp(1.5rem, 1.4559859155rem + 0.1877934272vw, 1.625rem);
+  font-weight: 500;
+  padding-bottom: clamp(1.5rem, 1.411971831rem + 0.3755868545vw, 1.75rem);
+}
+.swiper {
+  height: clamp(4.3125rem, 3.0801056338rem + 5.2582159624vw, 7.8125rem);
+}
+
+.swiper-slide {
+  margin: auto 0;
+  height: clamp(2.6875rem, 1.9392605634rem + 3.1924882629vw, 4.8125rem);
+  width: 180px;
+  display: flex;
+  align-items: center;
+}
+
+/*function for smooth resizing depending on the window size*/
+/*function to convert px to rem*/
 /*main colors page*/
 /*main font*/
 /*main sizes page*/
+.info-card {
+  margin-bottom: clamp(2.5625rem, 1.4841549296rem + 4.6009389671vw, 5.625rem);
+}
 .info-card__wrapper {
   display: flex;
   flex-wrap: wrap;

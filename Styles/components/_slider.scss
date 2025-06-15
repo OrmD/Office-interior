@@ -1,0 +1,29 @@
+@import "../abstracts/functions";
+.client-company {
+  margin-bottom: resizing(44, 41);
+  // .client-company__title
+
+  &__title {
+    text-align: center;
+    font-size: resizing(26, 24);
+    font-weight: 500;
+    padding-bottom: resizing(28, 24);
+  }
+
+  // .client-company__slider
+
+  &__slider {
+  }
+}
+.swiper {
+  height: resizing(125, 69);
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+  margin: auto 0;
+  height: resizing(77, 43);
+  width: 180px;
+  display: flex;
+  align-items: center;
+}

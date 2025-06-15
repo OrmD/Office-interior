@@ -1,3 +1,5 @@
+import './swaiper.js';
+
 function dropDownList(btnActive, dropDownList, className) {
 	const btn = document.querySelector(btnActive);
 	const dropDown = document.querySelector(dropDownList);
