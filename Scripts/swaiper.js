@@ -9,7 +9,6 @@ async function getJSONimg() {
 
 		for (let i = 0; i < data.length; i++) {
 			const sliderData = data[i]
-			console.log(sliderData.img);
 
 			const newSliderDiv = document.createElement('div');
 			newSliderDiv.classList.add('swiper-slide');

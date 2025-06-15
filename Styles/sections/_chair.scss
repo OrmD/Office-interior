@@ -1,0 +1,114 @@
+.chair {
+  // .chair__body
+
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: space-between;
+    gap: resizing(50, 28);
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
+  }
+
+  // .chair__title
+
+  &__title {
+    font-weight: 600;
+    font-size: resizing(62, 46, 1440, 428);
+    line-height: resizing(72, 38);
+    max-width: rem(1075);
+    @media (max-width: 440px) {
+      max-width: resizing(400, 300, 425, 320);
+      font-size: resizing(40, 30, 425, 320);
+    }
+  }
+
+  // .chair__btn-block
+
+  &__btn-block {
+    max-width: rem(368);
+    @media (max-width: 830px) {
+      max-width: rem(320);
+    }
+    @media (max-width: 768px) {
+      max-width: rem(368);
+      order: 3;
+    }
+  }
+
+  // .chair__btn-title
+
+  &__btn-title {
+    font-size: rem(28);
+    line-height: resizing(36, 28);
+    margin-bottom: resizing(30, 24);
+  }
+
+  // .chair__btn
+
+  &__btn {
+    display: flex;
+    justify-content: space-between;
+    max-width: rem(257);
+    width: 100%;
+    transition: all 0.3s ease-in-out 0s;
+    &:hover {
+      transition: all 0.3s ease-in-out 0s;
+      box-shadow: 0 0 0 2px $primary-color;
+      .chair__btn-svg {
+        transform: rotate(90deg);
+      }
+    }
+    &:active {
+      color: #8c8c8c;
+    }
+    @media (max-width: 768px) {
+      max-width: rem(335);
+      width: 100%;
+    }
+  }
+
+  &__btn-link {
+    font-size: rem(24);
+    font-weight: 500;
+  }
+  &__btn-svg {
+    transition: all 0.3s ease-in-out 0s;
+  }
+  // .chair__images
+
+  &__images {
+    position: relative;
+    @media (max-width: 768px) {
+      margin: 0 auto;
+      margin-bottom: resizing(90, 50);
+      order: 2;
+    }
+  }
+
+  // .chair__img-big
+
+  &__img-big {
+    width: resizing(506, 265);
+    height: resizing(674, 362);
+    width: resizing(265, 252, 375, 320);
+    height: resizing(362, 347, 375, 320);
+  }
+
+  // .chair__img-mini
+
+  &__img-mini {
+    position: absolute;
+    top: resizing(285, 185);
+    left: resizing(-117, -40);
+    left: resizing(-40, -20, 375, 320);
+    width: resizing(340, 186);
+    height: resizing(425, 233);
+    width: resizing(186, 170, 375, 320);
+    height: resizing(233, 217, 375, 320);
+  }
+}
+.container {
+}
