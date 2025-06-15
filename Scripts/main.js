@@ -35,3 +35,11 @@ burgerIcon.addEventListener('click', () => {
 		burgerIcon.setAttribute('aria-expanded', 'true');
 	}
 })
+
+const btn = document.querySelector(".details__show-more");
+const text = document.querySelector(".details__desc");
+
+btn.addEventListener("click", () => {
+	text.classList.toggle("expanded");
+	btn.textContent = text.classList.contains("expanded") ? "Show less" : "Show more";
+});
