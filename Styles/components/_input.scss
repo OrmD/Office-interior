@@ -1,5 +1,7 @@
 input {
-  background-color: $light-gray-color;
+  background-color: $gray-color;
   border-radius: rem(40);
-  padding: rem(23.5) rem(24);
+  border-color: transparent;
+  padding: rem(17) rem(24);
+  line-height: 11px;
 }

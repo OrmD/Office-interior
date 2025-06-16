@@ -91,10 +91,12 @@
   // .chair__img-big
 
   &__img-big {
-    width: resizing(506, 265);
-    height: resizing(674, 362);
-    width: resizing(265, 252, 375, 320);
-    height: resizing(362, 347, 375, 320);
+    width: resizing(506, 265, 1440, 375);
+    height: resizing(674, 362, 1440, 375);
+    @media (max-width: 375px) {
+      width: resizing(265, 252, 375, 320);
+      height: resizing(362, 347, 375, 320);
+    }
   }
 
   // .chair__img-mini
@@ -103,11 +105,14 @@
     position: absolute;
     top: resizing(285, 185);
     left: resizing(-117, -40);
-    left: resizing(-40, -20, 375, 320);
+
     width: resizing(340, 186);
     height: resizing(425, 233);
-    width: resizing(186, 170, 375, 320);
-    height: resizing(233, 217, 375, 320);
+    @media (max-width: 375px) {
+      left: resizing(-40, -20, 375, 320);
+      width: resizing(186, 170, 375, 320);
+      height: resizing(233, 217, 375, 320);
+    }
   }
 }
 .container {

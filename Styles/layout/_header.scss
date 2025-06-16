@@ -149,6 +149,11 @@
   // .header__nav-list-link
 
   &__nav-list-link {
+    transition: all 0.3s ease 0s;
+    &:hover {
+      transition: all 0.3s ease 0s;
+      text-shadow: 1px 1px 2px #2c29298f;
+    }
   }
 
   // .header__nav-dropdown-btn
@@ -176,13 +181,26 @@
   &__nav-dropdown-list {
     opacity: 0;
     visibility: hidden;
-    height: 0;
+    z-index: 5;
     position: absolute;
     top: 25px;
     left: 0;
+    background-color: #e5e4dd;
+    padding: 5px;
+    border-radius: 8px;
     transition: all 0.5s ease 0s;
+    &.show {
+      height: auto;
+    }
     @media (max-width: 700px) {
       text-align: center;
+      position: static;
+      transition: none;
+      &.show {
+        background-color: transparent;
+      }
+      background-color: transparent;
+      height: 0;
       .burger-menu.burg-active {
         position: absolute;
         top: 30px;
@@ -206,6 +224,11 @@
   // .header__nav-dropdown-list-link
 
   &__nav-dropdown-list-link {
+    transition: all 0.3s ease 0s;
+    &:hover {
+      transition: all 0.3s ease 0s;
+      text-shadow: 1px 1px 2px #2c29298f;
+    }
   }
 
   // .header__nav-list-btn

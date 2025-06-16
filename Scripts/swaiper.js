@@ -1,17 +1,19 @@
 import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
 
-const wrapperSlides = document.querySelector('.swiper-wrapper');
+const wrapperSlides = document.querySelector('.company-wrapper');
 
 async function getJSONimg() {
 	try {
 		const res = await fetch("../json/client.json")
 		const data = await res.json()
+		console.log('okay');
 
 		for (let i = 0; i < data.length; i++) {
+
 			const sliderData = data[i]
 
 			const newSliderDiv = document.createElement('div');
-			newSliderDiv.classList.add('swiper-slide');
+			newSliderDiv.classList.add('swiper-slide', 'company-slide');
 			newSliderDiv.innerHTML = `
 			<img src='${sliderData.img}' alt='${sliderData.alt}' />
 	
@@ -19,7 +21,7 @@ async function getJSONimg() {
 			wrapperSlides.append(newSliderDiv);
 		}
 
-		const swiper = new Swiper('.swiper', {
+		const swiper = new Swiper('.swiper-company', {
 			// Optional parameters
 			direction: 'horizontal',
 			loop: data.length >= 7,
@@ -63,6 +65,47 @@ async function getJSONimg() {
 	}
 }
 getJSONimg()
+
+const thumbsSlider = new Swiper('.product-slider-thumbs', {
+	direction: 'vertical',
+	slidesPerView: 3,
+	spaceBetween: 10,
+	watchOverflow: false,
+	navigation: {
+		nextEl: '.slider-thumbs-next',
+		prevEl: '.slider-thumbs-prev',
+	},
+	breakpoints: {
+		768: {
+			direction: 'vertical'
+		},
+		0: {
+			direction: 'horizontal'
+		}
+	}
+});
+
+const mainSlider = new Swiper('.product-slider-main', {
+	direction: 'vertical',
+	spaceBetween: 10,
+	slidesPerView: 1,
+	navigation: {
+		nextEl: '.slider-thumbs-next',
+		prevEl: '.slider-thumbs-prev',
+	},
+	thumbs: {
+		swiper: thumbsSlider,
+	},
+	breakpoints: {
+		1024: {
+			direction: 'vertical'
+		},
+		0: {
+			direction: 'horizontal',
+			loop: 'true'
+		}
+	}
+});
 
 
 
