@@ -8,21 +8,21 @@
 /*function to convert px to rem*/
 @font-face {
   font-family: "Avenir Next";
-  src: url("../../fonts/AvenirNextCyr-Regular.woff2");
+  src: url("../fonts/AvenirNextCyr-Regular.woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Avenir Next";
-  src: url("../../fonts/AvenirNextCyr-Medium.woff2");
+  src: url("../fonts/AvenirNextCyr-Medium.woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Avenir Next";
-  src: url("../../fonts/AvenirNextCyr-Demi.woff2");
+  src: url("../fonts/AvenirNextCyr-Demi.woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -437,8 +437,12 @@
 }
 .footer__list {
   transition: all 0.5s ease 0s;
-  height: 0;
   overflow: hidden;
+}
+@media (max-width: 768px) {
+  .footer__list {
+    height: 0;
+  }
 }
 .footer__list.show {
   transition: all 0.5s ease 0s;
