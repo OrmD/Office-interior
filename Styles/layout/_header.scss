@@ -271,6 +271,42 @@
   // .header__body-icons-link
 
   &__body-icons-link {
+    position: relative;
+    & .product-in-bascket {
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: rem(12);
+      height: rem(12);
+      border-radius: 50%;
+      background-color: $red-badge-color;
+      color: $secondary-color;
+      font-size: rem(7);
+      text-align: center;
+      padding: 1.5px 0;
+      &.active-busket-icon {
+        animation: activeBusket 0.7s ease-in forwards;
+      }
+    }
+  }
+  @keyframes activeBusket {
+    0% {
+      opacity: 0;
+      visibility: hidden;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1.2);
+    }
+    100% {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
+    }
   }
 
   // .header__body-icons-img

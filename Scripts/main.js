@@ -1,4 +1,5 @@
 import './swaiper.js';
+import { dropDownList, addActiveClass } from './functions.js';
 const footerTag = document.querySelector('.footer')
 
 const arrowFooter = footerTag.querySelectorAll(".footer__dropdown-btn")
@@ -11,27 +12,6 @@ arrowFooter.forEach((arrow, index) => {
 	});
 });
 
-
-function dropDownList(btnActive, dropDownList, className) {
-	const btn = document.querySelector(btnActive);
-	const dropDown = document.querySelector(dropDownList);
-
-	btn.addEventListener('click', () => {
-		dropDown.classList.toggle(className);
-		btn.classList.toggle('active');
-		if (btn.getAttribute('aria-expanded') === 'true') {
-			btn.setAttribute('aria-expanded', 'false');
-		} else {
-			btn.setAttribute('aria-expanded', 'true');
-		}
-	});
-
-	document.addEventListener('click', (event) => {
-		if (!btn.contains(event.target) && !dropDown.contains(event.target)) {
-			dropDown.classList.remove(className);
-		}
-	});
-}
 dropDownList('.header__lang-dropdown-btn', '.header__lang-dropdown-list', 'show');
 dropDownList('.header__nav-dropdown-btn', '.header__nav-dropdown-list', 'show');
 const burgerIcon = document.querySelector('.burger-menu');
@@ -55,41 +35,12 @@ btn.addEventListener("click", () => {
 	btn.textContent = text.classList.contains("expanded") ? "Show less" : "Show more";
 });
 
-function addActiveClass(IDparentBlock, buttons, classActive, defltActiveBtn = null, toggleBtn = true) {
-	const parentBlock = document.getElementById(IDparentBlock);
-	if (!parentBlock) return;
 
-	const collectionBtns = parentBlock.querySelectorAll(buttons);
-
-	collectionBtns.forEach((btn, index) => {
-		// Додаємо клас за замовчуванням
-		if (defltActiveBtn !== null && index === defltActiveBtn) {
-			btn.classList.add(classActive);
-		}
-
-		btn.addEventListener('click', () => {
-			if (toggleBtn) {
-
-
-				if (('.' + btn.classList) === buttons) {
-					collectionBtns.forEach(b => b.classList.remove(classActive));
-					btn.classList.add(classActive);
-				} else {
-					btn.classList.remove(classActive);
-				}
-
-
-			} else {
-				// RADIO: лише одна активна кнопка
-				collectionBtns.forEach(b => b.classList.remove(classActive));
-				btn.classList.add(classActive);
-			}
-		});
-	});
-}
 addActiveClass('color-palette', '.product__btn-color', 'active-color', 0, false)
 addActiveClass('Frame', '.product__btn', 'active-pr-btn')
 addActiveClass('Afmeting', '.product__btn', 'active-pr-btn')
+addActiveClass('order-block', '.product__btn-like', 'active-like-btn')
+
 
 const counterProduct = document.querySelector(".product__counter-number")
 const btnMinus = document.querySelector(".product__counter-minus")
@@ -107,8 +58,6 @@ btnMinus.addEventListener('click', () => {
 		counterProduct.textContent = count;
 	}
 });
-
-
 
 function moveBlockOnResize() {
 	const blockPrice = document.querySelector('product__price-block');
@@ -130,4 +79,9 @@ moveBlockOnResize();
 // Запуск при зміні розміру вікна
 window.addEventListener('resize', moveBlockOnResize);
 
+const busketBtn = document.querySelector('.product__btn-in-busket')
+const busketCountIcon = document.querySelector('.product-in-bascket')
+busketBtn.addEventListener('click', () => {
+	busketCountIcon.classList.add('active-busket-icon')
 
+})
