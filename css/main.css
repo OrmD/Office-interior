@@ -1250,7 +1250,7 @@ input {
   color: #ffffff;
 }
 .fullscreen__body {
-  background: url("/Images/fullscreen/full-screen-section.png");
+  background: url("Images/fullscreen/full-screen-section.png");
   background-size: cover;
   background-position: center center; /* Центрує по горизонталі і вертикалі */
   background-repeat: no-repeat;
