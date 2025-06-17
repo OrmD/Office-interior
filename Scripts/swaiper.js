@@ -4,7 +4,7 @@ const wrapperSlides = document.querySelector('.company-wrapper');
 
 async function getJSONimg() {
 	try {
-		const res = await fetch("../json/client.json")
+		const res = await fetch("json/client.json")
 		const data = await res.json()
 		console.log('okay');
 
